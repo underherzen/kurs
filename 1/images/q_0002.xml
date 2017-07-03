@@ -1,0 +1,2298 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+'*	q_0002.xml
+'*	Copyright (c) Websoft Ltd.  All rights reserved.
+--><params>
+	<object>
+		<format>3.0</format>
+		<label>Результаты</label>
+		<width>600</width>
+		<height>100</height>
+		<description>Результаты</description>
+		<default_color_bg>bg_color</default_color_bg>
+		<default_color_border>border_color</default_color_border>
+		<theme>theme</theme>
+		<state_extension>false</state_extension>
+	</object>
+	<page name="Основные" w="320" h="260">
+		<param type="edit" id="hidden.obj.not.defined" x="0" y="-50" w="1" h="1" def="Цель не определена"/>
+		<param type="edit" id="hidden.no.objects" x="0" y="-50" w="1" h="1" def="Объекты для результатов не определены"/>
+		<param type="edit" id="hidden.results" x="0" y="-50" w="1" h="1" def="Результаты по объектам не могут быть показаны в редакторе"/>
+		<param type="edit" id="hidden.question_header" x="0" y="-50" w="1" h="1" def="Пример заголовка вопроса"/>
+		<param type="edit" id="hidden.question_text" x="0" y="-50" w="1" h="1" def="Пример текста вопроса"/>
+		<param type="edit" id="hidden.question_variant_correct" x="0" y="-50" w="1" h="1" def="Пример правильно выбранного варианта"/>
+		<param type="edit" id="hidden.question_variant_incorrect" x="0" y="-50" w="1" h="1" def="Пример неправильно выбранного варианта"/>
+		<param type="edit" id="hidden.question_variant_selected" x="0" y="-50" w="1" h="1" def="Пример выбранного варианта"/>
+		<param type="edit" id="hidden.question_variant_unselected" x="0" y="-50" w="1" h="1" def="Пример невыбранного варианта"/>
+		<param type="label" id="lab_display_type" text="Тип показа" x="10" y="10" w="120" h="11"/>
+		<param type="select" id="display_type" text="" def="scale" x="130" y="8" w="180" h="13">
+			<items>
+				<item id="plain" label="Общий результат">
+					<events>
+						<event name="selendok" target="fs_plain" action="show"/>
+						<event name="selendok" target="fs_scale" action="hide"/>
+						<event name="selendok" target="fs_detail" action="hide"/>
+					</events>
+				</item>
+				<item id="scale" label="Шкалы по целям">
+					<events>
+						<event name="selendok" target="fs_plain" action="hide"/>
+						<event name="selendok" target="fs_scale" action="show"/>
+						<event name="selendok" target="fs_detail" action="hide"/>
+					</events>
+				</item>
+				<item id="detail" label="Детально по объектам">
+					<events>
+						<event name="selendok" target="fs_plain" action="hide"/>
+						<event name="selendok" target="fs_scale" action="hide"/>
+						<event name="selendok" target="fs_detail" action="show"/>
+					</events>
+				</item>
+			</items>
+		</param>
+		<param type="fieldset" id="fs_plain">
+			<param type="label" text="Цель" x="10" y="26" w="120" h="11"/>
+			<param type="objectiveid" id="q_board" text="" def="total" x="130" y="24" w="163" h="13"/>
+			<param type="label" id="lab_plain_values" text="Показать" x="10" y="42" w="120" h="11"/>
+			<param type="select" id="plain_values" text="" def="score_percent" x="130" y="40" w="180" h="13">
+				<items>
+					<item id="score" label="Только баллы"/>
+					<item id="percent" label="Только проценты"/>
+					<item id="score_percent" label="Баллы и проценты"/>
+				</items>
+			</param>
+			<param type="label" id="lab_plain_text" text="Текст" x="10" y="58" w="120" h="11"/>
+			<param type="edit" id="plain_text" text="" def="Набрано {{1}} баллов из {{2}}" x="130" y="56" w="180" h="13"/>
+		</param>
+		<param type="fieldset" id="fs_scale">
+			<param type="label" id="lab_scoreboards" text="Цели" x="10" y="26" w="120" h="11"/>
+			<param type="list" id="scoreboards" text="" def="yes" x="10" y="24" w="300" h="100">
+				<page w="260" h="160" name="Цель">
+					<param type="label" id="lab_scoreboard" text="Цель" x="10" y="10" w="120" h="11"/>
+					<param type="objectiveid" id="scoreboard" text="Цель" def="total" x="130" y="8" w="103" h="13"/>
+					<param type="label" id="lab_sb_text" text="Название шкалы" x="10" y="26" w="120" h="11"/>
+					<param type="edit" id="sb_text" text="Название шкалы" def="Название шкалы" x="130" y="24" w="120" h="13"/>
+					<param type="label" id="lab_scorecolor" text="Заливка индикатора" x="10" y="42" w="120" h="13"/>
+					<param type="color" id="scorecolor" text="#0080C0" def="#0080C0" x="130" y="40" w="40" h="13" listcolumn="0"/>
+				</page>
+			</param>
+			<param type="label" id="lab_scale_values" text="Показать" x="10" y="132" w="120" h="11"/>
+			<param type="select" id="scale_values" text="" def="score_percent" x="130" y="130" w="180" h="13">
+				<items>
+					<item id="score" label="Только баллы"/>
+					<item id="percent" label="Только проценты"/>
+					<item id="score_percent" label="Баллы и проценты"/>
+				</items>
+			</param>
+			<param type="label" id="lab_scale_text" text="Текст" x="10" y="148" w="120" h="11"/>
+			<param type="edit" id="scale_text" text="" def="{{1}} из {{2}}" x="130" y="146" w="180" h="13"/>
+		</param>
+		<param type="fieldset" id="fs_detail">
+			<param type="label" id="lab_objects" text="Объекты" def="" x="10" y="26" w="120" h="11"/>
+			<param type="list" id="objects" text="" def="" x="10" y="24" w="300" h="100">
+				<page w="260" h="60" name="Объекты">
+					<param type="label" id="lab_objid" text="Объект" def="" x="10" y="10" w="120" h="13"/>
+					<param type="objectid" id="objid" text="Объект" def="" x="130" y="8" w="103" h="13"/>
+					<param type="check" id="displayobjheader" text="Заголовок" def="no" x="10" y="24" w="120" h="13" listcolumn="0">
+						<events>
+							<event name="check" target="objheader" action="enable"/>
+							<event name="uncheck" target="objheader" action="disable"/>
+						</events>
+					</param>
+					<param type="edit" id="objheader" text="Заголовок" def="Заголовок" x="130" y="24" w="120" h="13"/>
+				</page>
+			</param>
+			<param type="check" id="display_questiontext" text="Текст вопроса" def="yes" x="10" y="130" w="240" h="13"/>
+			<param type="check" id="display_main_score" text="Основная оценка в заголовке" def="yes" x="10" y="146" w="240" h="13"/>
+			<param type="check" id="display_statistics" text="Показывать блок статистики" def="yes" x="10" y="162" w="240" h="13">
+				<events>
+					<event name="check" target="display_attempts" action="enable"/>
+					<event name="check" target="display_scores" action="enable"/>
+					<event name="check" target="display_timers" action="enable"/>
+					<event name="uncheck" target="display_attempts" action="disable"/>
+					<event name="uncheck" target="display_scores" action="disable"/>
+					<event name="uncheck" target="display_timers" action="disable"/>
+				</events>
+			</param>
+			<param type="check" id="display_attempts" text="Число попыток" def="yes" x="10" y="178" w="240" h="13"/>
+			<param type="check" id="display_scores" text="Баллы вопроса по целям" def="yes" x="10" y="194" w="240" h="13"/>
+			<param type="check" id="display_timers" text="Время вопроса" def="yes" x="10" y="210" w="240" h="13"/>
+			<param type="check" id="display_variants" text="Показывать ответы пользователя" def="yes" x="10" y="226" w="240" h="13">
+				<events>
+					<event name="check" target="display_corrects" action="enable"/>
+					<event name="uncheck" target="display_corrects" action="disable"/>
+				</events>
+			</param>
+			<param type="check" id="display_corrects" text="Показывать правильные ответы" def="yes" x="10" y="242" w="240" h="13"/>
+		</param>
+    </page>
+	<page name="Вид" w="320" h="260">
+		<param type="check" id="display_bg" text="Показывать подложку" def="yes" x="10" y="8" w="300" h="13">
+			<events>
+				<event name="check" target="fs_bg" action="enable"/>
+				<event name="uncheck" target="fs_bg" action="disable"/>
+			</events>
+		</param>
+		<param type="fieldset" id="fs_bg">
+			<param type="label" id="lab_theme" text="Тема" def="" x="10" y="26" w="120" h="13"/>
+			<param type="select" id="theme" text="" def="light" x="130" y="24" w="180" h="13">
+				<items>
+					<item id="simple" label="Простая"/>
+					<item id="light" label="Легкая"/>
+					<item id="standard" label="Стандартная"/>
+				</items>
+			</param>
+			<param type="color" id="bg_color" text="" def="#E8EEFF" x="130" y="40" w="40" h="13"/>
+			<param type="color" id="border_color" text="" def="#336699" x="190" y="40" w="40" h="13"/>
+			<param type="label" id="lab_padding" text="Отбивка" x="10" y="58" w="120" h="13"/>
+			<param type="spinner" id="padding" text="" def="15" x="130" y="56" w="32" h="13" min="0" max="99"/>
+			<param type="label" id="lab_padding_px" text="пкс" x="165" y="58" w="30" h="13"/>
+			<param type="label" id="lab_shadow_strength" text="Тень" def="" x="10" y="74" w="120" h="13"/>
+			<param type="select" id="shadow_strength" text="" def="normal" x="130" y="72" w="120" h="13">
+				<items>
+					<item id="none" label="Без тени"/>
+					<item id="extralight" label="Очень слабая"/>
+					<item id="light" label="Слабая"/>
+					<item id="normal" label="Нормальная"/>
+					<item id="dark" label="Интенсивная"/>
+					<item id="extradark" label="Очень интенсивная"/>
+				</items>
+			</param>
+		</param>
+
+		<param type="label" id="lab_font" text="Шрифт" def="" x="10" y="90" w="120" h="13"/>
+		<param type="select" id="font" text="" def="robotomedium" x="130" y="88" w="88" h="13">
+			<items>
+				<item id="Arial" label="Arial">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="ArialBlack" label="Arial Black">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="ArialNarrow" label="Arial Narrow">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="ComicSansMS" label="Comic Sans MS">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="CourierNew" label="Courier New">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Georgia" label="Georgia">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Impact" label="Impact">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="LucidaConsole" label="Lucida Console">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="LucidaSansUnicode" label="Lucida Sans Unicode">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Palatino" label="Palatino">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Tahoma" label="Tahoma">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Times" label="Times New Roman">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="TrebuchetMS" label="Trebuchet MS">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="Verdana" label="Verdana">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="clear_sans_lightregular" label="WF Clear Sans Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="clear_sans_mediumregular" label="WF Clear Sans Medium">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="clear_sansregular" label="WF Clear Sans Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="clear_sans_thinregular" label="WF Clear Sans Thin">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="droid_sans_monoregular" label="WF Droid Sans Mono">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="droid_sansregular" label="WF Droid Sans Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="droid_serifregular" label="WF Droid Serif Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="nerisblack" label="WF Neris Black">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="nerislight" label="WF Neris Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="nerissemibold" label="WF Neris SemiBold">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="neristhin" label="WF Neris Thin">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="noto_sansregular" label="WF Noto Sans Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="noto_serifregular" label="WF Noto Serif Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="open_sanscondensed_light" label="WF Open Sans Condensed Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="open_sansextrabold" label="WF Open Sans Extra Bold">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="open_sanslight" label="WF Open Sans Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="open_sansregular" label="WF Open Sans Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="open_sanssemibold" label="WF Open Sans SemiBold">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="permiansanstypefaceregular" label="WF Permian Sans Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="permianseriftypefaceregular" label="WF Permian Serif Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="permianslabseriftypefaceRg" label="WF Permian Slab Serif Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="robotoblack" label="WF Roboto Black">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="roboto_condensedregular" label="WF Roboto Condensed">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="roboto_condensedlight" label="WF Roboto Condensed Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="robotolight" label="WF Roboto Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="robotomedium" label="WF Roboto Medium">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="robotoregular" label="WF Roboto Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="robotothin" label="WF Roboto Thin">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="roboto_slablight" label="WF Roboto Slab Light">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="roboto_slabregular" label="WF Roboto Slab Regular">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="roboto_slabthin" label="WF Roboto Slab Thin">
+					<events>
+						<event name="selendok" target="font_custom" action="hide"/>
+					</events>
+				</item>
+				<item id="custom" label="По выбору">
+					<events>
+						<event name="selendok" target="font_custom" action="show"/>
+					</events>
+				</item>
+			</items>
+		</param>
+		<param type="edit" id="font_custom" text="" def="" x="220" y="88" w="90" h="13"/>
+		<param type="select" id="font_style" text="" def="normal" x="130" y="104" w="88" h="13">
+			<items>
+				<item id="normal" label="Обычный"/>
+				<item id="bold" label="Жирный"/>
+				<item id="italic" label="Курсив"/>
+				<item id="bolditalic" label="Жирный курсив"/>
+			</items>
+		</param>
+		<param type="spinner" id="font_size" text="" def="16" x="220" y="104" w="32" h="13" min="1" max="99"/>
+		<param type="label" id="lab_font_size2" text="пкс" def="" x="255" y="106" w="30" h="11"/>
+		
+		<param type="label" id="lab_font_color_type" text="Цвет шрифта" def="" x="10" y="122" w="120" h="11"/>
+		<param type="select" id="font_color_type" text="" def="by_scale" x="130" y="120" w="118" h="13">
+			<items>
+				<item id="by_scale" label="Как у шкалы *">
+					<events>
+						<event name="selendok" target="font_color" action="hide"/>
+					</events>
+				</item>
+				<item id="custom" label="По выбору">
+					<events>
+						<event name="selendok" target="font_color" action="show"/>
+					</events>
+				</item>
+			</items>
+		</param>
+		<param type="color" id="font_color" text="" def="#666666" x="250" y="120" w="40" h="13"/>
+		<param type="label" id="lab_base_color_type" text="Цвет таблиц" def="" x="10" y="138" w="120" h="11"/>
+		<param type="select" id="base_color_type" text="" def="by_theme" x="130" y="136" w="118" h="13">
+			<items>
+				<item id="by_theme" label="Как у темы">
+					<events>
+						<event name="selendok" target="base_color" action="hide"/>
+					</events>
+				</item>
+				<item id="custom" label="По выбору">
+					<events>
+						<event name="selendok" target="base_color" action="show"/>
+					</events>
+				</item>
+			</items>
+		</param>
+		<param type="color" id="base_color" text="" def="#0080C0" x="250" y="136" w="40" h="13"/>
+		<param type="label" id="lab_scalecolor" text="Заливка шкалы" x="10" y="154" w="120" h="13"/>
+		<param type="color" id="scalecolor" text="#666666" def="#666666" x="130" y="152" w="40" h="13"/>
+		<param type="label" id="lab_interscale" text="Между шкалами" x="10" y="170" w="120" h="13"/>
+		<param type="spinner" id="interscale" text="" def="10" x="130" y="168" w="32" h="13" min="0" max="99"/>
+		<param type="label" id="lab_interscale_px" text="пкс" x="165" y="170" w="30" h="13"/>
+	</page>
+	<page name="Тексты" w="320" h="260">
+        <param type="label" id="lab_text_objecttypes" text="Тип" def="" x="10" y="10" w="60" h="13"/>
+        <param type="select" id="text_objecttypes" text="" def="na" x="70" y="8" w="118" h="13">
+            <items>
+                <item id="na" label="Не определен">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="show"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="tf" label="Правда-Ложь">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="show"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="choice" label="Единственный выбор">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="show"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="select" label="Множественный выбор">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="show"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="range" label="Упорядочивание">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="show"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="numeric" label="Числовой ввод">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="show"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="text" label="Текстовый ввод">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="show"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="oto" label="Парное соответствие">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="show"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="otm" label="Соответствие один к многим">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="show"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="mtm" label="Соответствие многие к многим">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="show"></event>
+                        <event name="selendok" target="text_objecttype_test" action="hide"></event>
+                    </events>
+                </item>
+                <item id="test" label="Тест">
+                    <events>
+                        <event name="selendok" target="text_objecttype_na" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_tf" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_choice" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_select" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_range" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_numeric" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_text" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_oto" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_otm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_mtm" action="hide"></event>
+                        <event name="selendok" target="text_objecttype_test" action="show"></event>
+                    </events>
+                </item>
+            </items>
+        </param>
+        <param type="edit" id="text_objecttype_na" text="" def="Не определен" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_tf" text="" def="Вопрос Правда-Ложь" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_choice" text="" def="Вопрос с единственным выбором" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_select" text="" def="Вопрос с множественным выбором" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_range" text="" def="Вопрос на упорядочивание вариантов" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_numeric" text="" def="Вопрос на числовой ввод" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_text" text="" def="Вопрос на текстовый ввод" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_oto" text="" def="Вопрос на соответствие один-к-одному" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_otm" text="" def="Вопрос на соответствие один-к-многим" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_mtm" text="" def="Вопрос на соответствие многие-к-многим" x="190" y="8" w="120" h="13"/>
+        <param type="edit" id="text_objecttype_test" text="" def="Тест" x="190" y="8" w="120" h="13"/>
+
+        <param type="label" id="lab_text_scoringtypes" text="Оценка" def="" x="10" y="26" w="60" h="11"/>
+        <param type="select" id="text_scoringtypes" text="" def="plain" x="70" y="24" w="118" h="13">
+            <items>
+                <item id="plain" label="Вес по всем целям">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="regress" label="Регрессивно по всем целям ">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="byobj" label="Разный вес по целям">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="byvar" label="Вес выбранного варианта">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="max" label="Макс. вес выбр. варианта">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="min" label="Мин. вес выбр. варианта">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="avg" label="Сред. по выбр. вариантам">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="show"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="hide"></event>
+                    </events>
+                </item>
+                <item id="avgall" label="Сред. по отношению ко всем">
+                    <events>
+                        <event name="selendok" target="text_scoringtype_plain" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_regressive" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byobj" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_byvar" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_max" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_min" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avg" action="hide"></event>
+                        <event name="selendok" target="text_scoringtype_avgall" action="show"></event>
+                    </events>
+                </item>
+            </items>
+        </param>
+        <param type="edit" id="text_scoringtype_plain" text="" def="Общий вес вопроса по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_regressive" text="" def="Вес по попыткам регрессивно по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_byobj" text="" def="Разные веса по целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_byvar" text="" def="Вес выбранного варианта по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_max" text="" def="Максимальный вес выбранного ответа по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_min" text="" def="Минимальный вес выбранного ответа по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_avg" text="" def="Средний вес только по выбранным ответам по всем целям" x="190" y="24" w="120" h="13"/>
+        <param type="edit" id="text_scoringtype_avgall" text="" def="Средний вес выбранных ответов по отношению ко всем правильным ответам по всем целям" x="190" y="24" w="120" h="13"/>
+
+        <param type="label" id="lab_text_constants" text="Прочие" def="" x="10" y="42" w="60" h="11"/>
+        <param type="select" id="text_constants" text="" def="notdefined" x="70" y="40" w="118" h="13">
+            <items>
+                <item id="notdefined" label="Нет текста вопроса">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="show"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="attemptsleft" label="Осталось попыток">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="show"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="attemptsmax" label="Отведено попыток">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="show"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="duration" label="Отведено времени">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="show"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="latency" label="Затрачено времени">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="show"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="nolimit" label="не ограничено">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="show"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="sec" label="секунд">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="show"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="scoringtype" label="Расчет оценки">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="show"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="objectives" label="Цели">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="show"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="score" label="Баллы">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="show"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="weight" label="вес">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="show"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="youranswer" label="Ваш ответ">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="show"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="bullets" label="Вы присоединили">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="show"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="targets" label="Базы">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="show"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="correct" label="Правильно">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="show"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="nodata" label="Еще не пройден">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="show"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="results" label="Результаты">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_results" action="show"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="statistics" label="Статистика">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="show"></event>
+                        <event name="selendok" target="text_constant_results" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="variants" label="Варианты">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+                        <event name="selendok" target="text_constant_variants" action="show"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="hide"></event>
+                    </events>
+                </item>
+                <item id="notcredited" label="Вопрос неоцениваемый">
+                    <events>
+                        <event name="selendok" target="text_constant_notdefined" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsleft" action="hide"></event>
+                        <event name="selendok" target="text_constant_attemptsmax" action="hide"></event>
+                        <event name="selendok" target="text_constant_duration" action="hide"></event>
+                        <event name="selendok" target="text_constant_latency" action="hide"></event>
+                        <event name="selendok" target="text_constant_nolimit" action="hide"></event>
+                        <event name="selendok" target="text_constant_sec" action="hide"></event>
+                        <event name="selendok" target="text_constant_scoringtype" action="hide"></event>
+                        <event name="selendok" target="text_constant_objectives" action="hide"></event>
+                        <event name="selendok" target="text_constant_score" action="hide"></event>
+                        <event name="selendok" target="text_constant_weight" action="hide"></event>
+                        <event name="selendok" target="text_constant_youranswer" action="hide"></event>
+                        <event name="selendok" target="text_constant_bullets" action="hide"></event>
+                        <event name="selendok" target="text_constant_targets" action="hide"></event>
+                        <event name="selendok" target="text_constant_correct" action="hide"></event>
+                        <event name="selendok" target="text_constant_nodata" action="hide"></event>
+                        <event name="selendok" target="text_constant_statistics" action="hide"></event>
+						<event name="selendok" target="text_constant_variants" action="hide"></event>
+                        <event name="selendok" target="text_constant_uncredited" action="show"></event>
+                    </events>
+                </item>
+            </items>
+        </param>
+        <param type="edit" id="text_constant_notdefined" text="" def="Текст вопроса не определен" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_attemptsleft" text="" def="Осталось попыток: " x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_attemptsmax" text="" def="Отведено попыток: " x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_duration" text="" def="Отведено времени: " x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_latency" text="" def="Затрачено времени:" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_nolimit" text="" def="не ограничено" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_sec" text="" def="сек" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_scoringtype" text="" def="Расчет оценки: " x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_objectives" text="" def="Цели" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_score" text="" def="Баллы" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_weight" text="" def="вес:" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_youranswer" text="" def="Ваш ответ" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_bullets" text="" def="Вы присоединили" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_targets" text="" def="Базы" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_correct" text="" def="Правильно" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_nodata" text="" def="Еще не пройден" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_statistics" text="" def="Статистика" x="190" y="40" w="120" h="13"/>
+        <param type="edit" id="text_constant_results" text="" def="Результаты" x="190" y="40" w="120" h="13"/>
+		<param type="edit" id="text_constant_variants" text="" def="Варианты" x="190" y="40" w="120" h="13"/>
+		<param type="edit" id="text_constant_uncredited" text="" def="Вопрос неоцениваемый" x="190" y="40" w="120" h="13"/>
+
+		<param type="edit" id="text_constant_question" text="" def="Вопрос неоцениваемый" x="190" y="40" w="120" h="13"/>
+
+    </page>
+	<methods>
+		<method name="Constructor" label="_Constructor" access="private">
+			<params>
+			</params>
+			<body>
+			<![CDATA[function Constructor(argobj)
+			{
+				var oCurObj = CLO[argobj.pid];
+				var jCurObjDiv = $(oCurObj.div);
+				var bDefer = false; 
+				switch(oCurObj.display)
+				{
+					case "none":
+					{
+						bDefer = true;
+						CL.Event.Subscribe({ aList: [ { sId: argobj.pid, sEvtName: "EVENT_OBJECT_SHOW" } ] });
+						break;
+					}
+					case "time":
+					case "frame":
+					case "slide":
+					{
+						if(oCurObj.iBegin!=null && +oCurObj.iBegin!=0)
+						{
+							bDefer = true;
+							CL.Event.Subscribe({ aList: [ { sId: argobj.pid, sEvtName: "EVENT_OBJECT_SHOW" } ] });
+						}
+						break;
+					}
+				}
+				
+				oCurObj.data =
+				{
+					bDisplayAttempts: (oCurObj.jxParams.children("display_attempts").text()=="yes"),
+					bDisplayCorrects: (oCurObj.jxParams.children("display_corrects").text()=="yes"),
+					bDisplayMainScore: (oCurObj.jxParams.children("display_main_score").text()=="yes"),
+					bDisplayQuestion: (oCurObj.jxParams.children("display_questiontext").text()=="yes"),
+					bDisplayScores: (oCurObj.jxParams.children("display_scores").text()=="yes"),
+					bDisplayStats: (oCurObj.jxParams.children("display_statistics").text()=="yes"),
+					bDisplayTimers: (oCurObj.jxParams.children("display_timers").text()=="yes"),
+					bDisplayVariants: (oCurObj.jxParams.children("display_variants").text()=="yes"),
+					sType: oCurObj.jxParams.children("display_type").text()
+				};
+
+				if(oCurObj.data.sType=="detail")
+				{
+					var jxObjList = oCurObj.jxParams.children("objects").children("item");
+					if(jxObjList.length!=0)
+					{
+						var jContainer = jCurObjDiv.find(".cl-results-container");
+						var jQTemplate = jCurObjDiv.find(".cl-template-storage .cl-results-q-template");
+						var jTTemplate = jCurObjDiv.find(".cl-template-storage .cl-results-t-template");
+						jxObjList.each(function ()
+						{
+							var sId = $(this).children("objid").text();
+							var jxObject = CL.jxModule.find("object[id='" + sId + "']");
+							var bDisplayHeader = ($(this).children("displayobjheader").text()=="yes");
+							var jQBlock;
+							if(jxObject.length>0)
+							{
+								var sType = jxObject.attr("type");
+								if(sType=="q_0000" || sType=="q_0001")
+								{
+									if(sType=="q_0001")
+									{
+										var jTBlock = jTTemplate.clone(true).attr({ "data-o-id": sId, "data-o-type": sType, "data-o-toggle": "1" }).appendTo(jContainer).show();
+										if(bDisplayHeader)
+										{
+											jTBlock.find(".cl-results-t-header .cl-results-header-title").html($(this).children("objheader").text());
+										}
+										else
+										{
+											jTBlock.find(".cl-results-t-header .cl-results-header-title").html(oCurObj.jxParams.children("text_objecttype_test").text() + " " + sId);
+										}
+										if(CLZ.oStore[sId]==null)
+										{
+											jTBlock.find(".cl-results-t-header .cl-switch").hide();
+											jTBlock.find(".cl-results-t-contents").hide();
+											jTBlock.find(".cl-results-t-header .cl-results-na").show();
+										}
+										else
+										{
+											jTBlock.find(".cl-results-t-header .cl-switch").show();
+											jTBlock.find(".cl-results-t-contents").show();
+											jTBlock.find(".cl-results-t-header .cl-results-na").hide();
+										}
+									}
+									else
+									{
+										jParent = jContainer;
+										jQBlock = jQTemplate.clone(true).attr({ "data-o-id": sId, "data-o-type": sType, "data-o-toggle": "1"  }).appendTo(jParent).show();
+										if(bDisplayHeader)
+										{
+											jQBlock.find(".cl-results-header .cl-results-header-title").html($(this).children("objheader").text());
+										}
+										else
+										{
+											jQBlock.find(".cl-results-header .cl-results-header-title").html(oCurObj.jxParams.children("text_objecttype_question").text() + " " + sId);
+										}
+										if(CLZ.oStore[sId]==null)
+										{
+											jQBlock.find(".cl-switch").hide();
+											jQBlock.find(".cl-results-contents").hide();
+											jQBlock.find(".cl-results-na").show();
+											jQBlock.find(".cl-results-header-score").hide();
+										}
+										else
+										{
+											if(CLZ.oStore[sId].u=="i")
+											{
+												jQBlock.find(".cl-switch").hide();
+												jQBlock.find(".cl-results-contents").hide();
+												jQBlock.find(".cl-results-na").show();
+												jQBlock.find(".cl-results-header-score").hide();
+											}
+											else if(CLZ.oStore[sId].u=="c")
+											{
+												jQBlock.find(".cl-switch").show();
+												jQBlock.find(".cl-results-contents").show();
+												jQBlock.find(".cl-results-na").hide();
+												jQBlock.find(".cl-results-header-score").show();
+											}
+										}
+									}
+								}
+							}
+						});
+						jContainer.find("div.cl-switch").css({ "cursor": "pointer" }).on("click", function (e) { oCurObj.CallMethod({ sMethod: "Toggle", oMethodArgs: { oElem: this, oEvt: e } }) });
+					}
+				}
+
+				oCurObj.data.bCreated = true;
+				oCurObj.FireEvent({ sName: "onCreated" });
+				if(!bDefer)
+				{
+					oCurObj.FireEvent({ sName: "onStartDisplay" });
+					oCurObj.CallMethod({ sMethod: "Display" });
+				}
+				else
+				{
+					jCurObjDiv.find(".container:first").hide();
+				}
+				return true;
+			}]]>
+			</body>
+		</method>
+		<method name="Toggle" label="_Toggle" access="private">
+            <params>
+            </params>
+            <body>
+			<![CDATA[function Toggle(argobj)
+			{
+				var oCurObj = CLO[argobj.pid];
+				var jCurObjDiv = $(oCurObj.div);
+				if(oCurObj==null || jCurObjDiv==null || argobj.oElem==null) return false;
+				var jParent = $(argobj.oElem).parents(".cl-results-parent:first");
+				var jContent = jParent.children(".cl-results-contents");
+				if(jContent.attr("data-in-trans")!=null) return false;
+				if(jContent.is(":visible"))
+				{
+					jContent.attr({ "data-in-trans": "1" }).slideUp(400, function () { this.removeAttribute("data-in-trans") });
+					$(argobj.oElem).find(".cl-switch-path-minus").hide();
+					$(argobj.oElem).find(".cl-switch-path-plus").show();
+				}
+				else
+				{
+					jContent.attr({ "data-in-trans": "1" }).slideDown(400, function () { this.removeAttribute("data-in-trans") });
+					$(argobj.oElem).find(".cl-switch-path-plus").hide();
+					$(argobj.oElem).find(".cl-switch-path-minus").show();
+				}
+				return true;
+			}]]>
+			</body>
+		</method>
+		<method name="HandleEvt" label="_HandleEvt" access="private">
+            <params>
+            </params>
+            <body>
+			<![CDATA[function HandleEvt(argobj)
+			{
+				var oCurObj = CLO[argobj.pid];
+				var jCurObjDiv = $(oCurObj.div);
+				if(oCurObj==null || jCurObjDiv==null) return false; 
+				switch(argobj.evt)
+				{
+					case "EVENT_OBJECT_SHOW":
+					{
+						if(!oCurObj.data.bCreated) return false;
+						oCurObj.FireEvent({ sName: "onStartDisplay" });
+						oCurObj.CallMethod({ sMethod: "Display" });
+						break;
+					}
+				}
+				return true;
+			}]]>
+			</body>
+		</method>
+		<method name="Display" label="_Display" access="private">
+			<params>
+			</params>
+			<body>
+			<![CDATA[function Display(argobj)
+			{
+				var oCurObj = CLO[argobj.pid];
+				var jCurObjDiv = $(oCurObj.div);
+				oCurObj.CallMethod({ sMethod: "Refresh" });
+				jCurObjDiv.find(".container:first").show();
+				return true;
+			}]]>
+			</body>
+		</method>
+		<method name="Refresh" label="ОБНОВИТЬ" access="public">
+			<params>
+			</params>
+			<body>
+			<![CDATA[function Refresh(argobj)
+			{
+				var oCurObj = CLO[argobj.pid];
+				var jCurObjDiv = $(oCurObj.div);
+				switch(oCurObj.data.sType)
+				{
+					case "plain":
+					{
+						var sObjId = oCurObj.jxParams.children("q_board").text();
+						if(sObjId=="") return false;
+						var nScore = +CLJ[sObjId].nRawScore;
+						var nMaxScore = +CLJ[sObjId].nMax;
+						var sPlainType = oCurObj.jxParams.children("plain_values").text();
+						var sD1 = "";
+						var sD2 = "";
+						var nPercent = (nMaxScore==0) ? 0 : Math.round(100*nScore/nMaxScore);
+						switch(sPlainType)
+						{
+							case "score":
+							{
+								sD1 = nScore.toString();
+								sD2 = nMaxScore.toString();
+								break;
+							}
+							case "percent":
+							{
+								sD1 = nPercent + "%";
+								sD2 = "100%";
+								break;
+							}
+							case "score_percent":
+							{
+								sD1 = nScore.toString() + " (" + nPercent + "%)";
+								sD2 = nMaxScore.toString() + " (100%)";
+								break;
+							}
+						}
+						var sString = oCurObj.jxParams.children("plain_text").text();
+						var aParts = sString.split("{{1}}");
+						sString = aParts.join(sD1);
+						aParts = sString.split("{{2}}");
+						jCurObjDiv.find(".cl-table-plain-td").html(aParts.join(sD2));
+						break;
+					}
+					case "scale":
+					{
+						var jxObjs = oCurObj.jxParams.find("scoreboards > item");
+						if(jxObjs.length==0) return false;
+						var jxItem;
+						var nScore;
+						var nMaxScore;
+						var sScaleType = oCurObj.jxParams.children("scale_values").text();
+						var sObjId;
+						var sD1 = "";
+						var sD2 = "";
+						var nPercent;
+						var sString = oCurObj.jxParams.children("scale_text").text();
+						var sTmpString;
+						for(var i=1; i<=jxObjs.length; i++)
+						{
+							jxItem = $(jxObjs[i-1]);
+							sObjId = jxItem.children("scoreboard").text();
+							if(sObjId=="") continue;
+							nScore = +CLJ[sObjId].nRawScore;
+							nMaxScore = +CLJ[sObjId].nMax;
+							nPercent = (nMaxScore==0) ? 0 : Math.round(100*nScore/nMaxScore);
+							switch(sScaleType)
+							{
+								case "score":
+								{
+									sD1 = nScore.toString();
+									sD2 = nMaxScore.toString();
+									break;
+								}
+								case "percent":
+								{
+									sD1 = nPercent + "%";
+									sD2 = "100%";
+									break;
+								}
+								case "score_percent":
+								{
+									sD1 = nScore.toString() + " (" + nPercent + "%)";
+									sD2 = nMaxScore.toString() + " (100%)";
+									break;
+								}
+							}
+							sTmpString = sString;
+							var aParts = sTmpString.split("{{1}}");
+							sTmpString = aParts.join(sD1);
+							aParts = sTmpString.split("{{2}}");
+							jCurObjDiv.find(".cl-table-scale-h-value-" + i).html(aParts.join(sD2));
+							jCurObjDiv.find(".cl-table-scale-h-scale-" + i + " .cl-table-scale-h-ind").css({ "margin-left": "-" + (100-nPercent) + "%" });
+						}
+						break;
+					}
+					case "detail":
+					{
+						function fnGetText(oArgs)
+						{
+							var jDiv = $(document.createElement("div")).html(oArgs.sHTML);
+							var sTxt = jDiv.text();
+							jDiv.remove();
+							return sTxt;
+						}
+						function fnFillVars(oArgs)
+						{
+							// jVarTable, jxParams, sId, oStore
+							var jRow;
+							var jCell; 
+							switch(oArgs.sType)
+							{
+								case "true-false":
+								case "choice":
+								case "select":
+								{
+									jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+									$(document.createElement("td")).addClass("cl-results-q-variants-header").attr({ "colspan": "2" }).html(oCurObj.jxParams.children("text_constant_youranswer").text()).appendTo(jRow);
+									if(oCurObj.data.bDisplayCorrects)
+									{
+										$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_correct").text()).appendTo(jRow);
+									}
+									break;
+								}
+								case "order":
+								case "numeric":
+								case "fib":
+								{
+									jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+									$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_youranswer").text()).appendTo(jRow);
+									if(oCurObj.data.bDisplayCorrects)
+									{
+										$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_correct").text()).appendTo(jRow);
+									}
+									break;
+								}
+								case "oto":
+								{
+									jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+									$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_targets").text()).appendTo(jRow);
+									$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_bullets").text()).appendTo(jRow);
+									if(oCurObj.data.bDisplayCorrects)
+									{
+										$(document.createElement("td")).addClass("cl-results-q-variants-header").html(oCurObj.jxParams.children("text_constant_correct").text()).appendTo(jRow);
+									}
+									break;
+								}
+							}
+							switch(oArgs.sType)
+							{
+								case "true-false":
+								{
+									jRow = $(document.createElement("tr")).attr({ "data-var-id": "true" }).appendTo(oArgs.jVarTable);
+									jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+									if(oArgs.oStore.R!=null)
+									{
+										if(oArgs.oStore.R[0]!=null)
+										{
+											if(+oArgs.oStore.R[0]==1)
+											{
+												jCell.addClass("cl-results-mark-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if(+oArgs.oStore.P[0]==1)
+													{
+														jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+													}
+													else
+													{
+														jCell.addClass("cl-results-mark-incorrect cl-results-incorrect").html("&#10007;")
+													}
+												}
+												else
+												{
+													jCell.html("&#10003;");
+												}
+											}
+										}
+									}
+									jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").html(fnGetText({ sHTML: oArgs.jxParams.children("q_text_true").text() })).appendTo(jRow);
+									if(oArgs.oStore.R!=null)
+									{
+										if(oArgs.oStore.R[0]!=null)
+										{
+											if(+oArgs.oStore.R[0]==1)
+											{
+												jCell.addClass("cl-results-var-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if(+oArgs.oStore.P[0]==1)
+													{
+														jCell.addClass("cl-results-correct");
+													}
+													else
+													{
+														jCell.addClass("cl-results-incorrect");
+													}
+												}
+											}
+										}
+									}
+									if(oCurObj.data.bDisplayCorrects)
+									{
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+										if(+oArgs.oStore.P[0]==1)
+										{
+											jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+										}
+									}
+									jRow = $(document.createElement("tr")).attr({ "data-var-id": "false" }).appendTo(oArgs.jVarTable);
+									jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+									if(oArgs.oStore.R!=null)
+									{
+										if(oArgs.oStore.R[0]!=null)
+										{
+											if(+oArgs.oStore.R[0]!=1)
+											{
+												jCell.addClass("cl-results-mark-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if(+oArgs.oStore.P[0]!=1)
+													{
+														jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+													}
+													else
+													{
+														jCell.addClass("cl-results-mark-incorrect cl-results-incorrect").html("&#10007;")
+													}
+												}
+												else
+												{
+													jCell.html("&#10003;");
+												}
+											}
+										}
+									}
+									jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").text(fnGetText({ sHTML: oArgs.jxParams.children("q_text_false").text() })).appendTo(jRow);
+									if(oArgs.oStore.R!=null)
+									{
+										if(oArgs.oStore.R[0]!=null)
+										{
+											if(+oArgs.oStore.R[0]!=1)
+											{
+												jCell.addClass("cl-results-var-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if(+oArgs.oStore.P[0]!=1)
+													{
+														jCell.addClass("cl-results-correct");
+													}
+													else
+													{
+														jCell.addClass("cl-results-incorrect");
+													}
+												}
+											}
+										}
+									}
+									if(oCurObj.data.bDisplayCorrects)
+									{
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+										if(+oArgs.oStore.P[0]!=1)
+										{
+											jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+										}
+									}
+									break;
+								}
+								case "choice":
+								{
+									var jxVars = oArgs.jxParams.find("q_variants_choice:first > item");
+									for(var k=1; k<=jxVars.length; k++)
+									{
+										jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+										if(oArgs.oStore.R!=null)
+										{
+											if(oArgs.oStore.R[0]!=null)
+											{
+												if(+oArgs.oStore.R[0]==k)
+												{
+													jCell.addClass("cl-results-mark-selected");
+													if(oCurObj.data.bDisplayCorrects)
+													{
+														if(+oArgs.oStore.P[0]==k)
+														{
+															jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+														}
+														else
+														{
+															jCell.addClass("cl-results-mark-incorrect cl-results-incorrect").html("&#10007;")
+														}
+													}
+													else
+													{
+														jCell.html("&#10003;");
+													}
+												}
+											}
+										}
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html(fnGetText({ sHTML: $(jxVars[k-1]).children("q_variant").text() })).appendTo(jRow);
+										if(oArgs.oStore.R!=null)
+										{
+											if(oArgs.oStore.R[0]!=null)
+											{
+												if(+oArgs.oStore.R[0]==k)
+												{
+													jCell.addClass("cl-results-var-selected");
+													if(oCurObj.data.bDisplayCorrects)
+													{
+														if(+oArgs.oStore.P[0]==k)
+														{
+															jCell.addClass("cl-results-correct");
+														}
+														else
+														{
+															jCell.addClass("cl-results-incorrect");
+														}
+													}
+												}
+											}
+										}
+										if(oCurObj.data.bDisplayCorrects)
+										{
+											jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+											if(+oArgs.oStore.P[0]==k)
+											{
+												jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+											}
+										}																		
+									}
+									break;
+								}
+								case "select":
+								{
+									var jxVars = oArgs.jxParams.find("q_variants_select:first > item");
+									for(var k=1; k<=jxVars.length; k++)
+									{
+										jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+										if(oArgs.oStore.R!=null)
+										{
+											if($.inArray(k, oArgs.oStore.R)!=-1)
+											{
+												jCell.addClass("cl-results-mark-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if($.inArray(k, oArgs.oStore.P)!=-1)
+													{
+														jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+													}
+													else
+													{
+														jCell.addClass("cl-results-mark-incorrect cl-results-incorrect").html("&#10007;")
+													}
+												}
+												else
+												{
+													jCell.html("&#10003;");
+												}
+											}
+										}
+										jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").html(fnGetText({ sHTML: $(jxVars[k-1]).children("q_variant").text() })).appendTo(jRow);
+										if(oArgs.oStore.R!=null)
+										{
+											if($.inArray(k, oArgs.oStore.R)!=-1)
+											{
+												jCell.addClass("cl-results-var-selected");
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if($.inArray(k, oArgs.oStore.P)!=-1)
+													{
+														jCell.addClass("cl-results-correct");
+													}
+													else
+													{
+														jCell.addClass("cl-results-incorrect");
+													}
+												}
+											}
+										}
+										if(oCurObj.data.bDisplayCorrects)
+										{
+											jCell = $(document.createElement("td")).addClass("cl-results-q-variants-mark").html("&nbsp;").appendTo(jRow);
+											if($.inArray(k, oArgs.oStore.P)!=-1)
+											{
+												jCell.addClass("cl-results-mark-correct cl-results-correct").html("&#10003;");
+											}
+										}																		
+									}
+									break;
+								}
+								case "order":
+								{
+									var jxVars = oArgs.jxParams.find("q_variants_order:first > item");
+									var iIdx = -1;
+									if(oArgs.oStore.R!=null && oArgs.oStore.R.length==jxVars.length)
+									{
+										for(var k=1; k<=jxVars.length; k++)
+										{
+											iIdx = +oArgs.oStore.R[k-1];
+											jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+											jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").html(fnGetText({ sHTML: $(jxVars[iIdx-1]).children("q_variant").text() })).appendTo(jRow);
+											if(oCurObj.data.bDisplayCorrects)
+											{
+												if(iIdx==k)
+												{
+													jCell.addClass("cl-results-correct");
+												}
+												else
+												{
+													jCell.addClass("cl-results-incorrect");
+												}
+												jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").html(fnGetText({ sHTML: $(jxVars[k-1]).children("q_variant").text() })).appendTo(jRow);
+											}
+										}
+									}
+									break;
+								}
+								case "numeric":
+								case "fib":
+								{
+									var jxVars = oArgs.jxParams.find("q_variants_" + oArgs.sType + ":first > item");
+									var jxCond;
+									var sOp;
+									var aCond;
+									var oSigns = { "eq": "=", "ne": "!=", "lt": "&lt;", "lte": "&lt;=", "gt": "&gt;", "gte": "&gt;=" };
+									if(oArgs.oStore.R!=null && oArgs.oStore.R.length!=0)
+									{
+										for(var k=1; k<=jxVars.length; k++)
+										{
+											jRow = $(document.createElement("tr")).appendTo(oArgs.jVarTable);
+											jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html(oArgs.oStore.R[k-1]).appendTo(jRow);
+											if(oCurObj.data.bDisplayCorrects)
+											{
+												if(CL.Q.EvalSet({ sType: oArgs.sType, sValue: oArgs.oStore.R[k-1], oPattern: oArgs.oStore.P[k-1] })==true)
+												{
+													jCell.addClass("cl-results-correct");
+												}
+												else
+												{
+													jCell.addClass("cl-results-incorrect");
+												}
+												aCond = [];
+												sOp = $(jxVars[k-1]).children("q_cond_logic").text();
+												jxCond = $(jxVars[k-1]).find("q_conditions > item");
+												if(oArgs.sType=="numeric")
+												{
+													for(var j=0; j<jxCond.length; j++)
+													{
+														aCond.push( oSigns[$(jxCond[j]).children("q_condition").text()] + $(jxCond[j]).children("q_variant").text() );
+													}
+												}
+												else
+												{
+													for(var j=0; j<jxCond.length; j++)
+													{
+														switch($(jxCond[j]).children("q_condition").text())
+														{
+															case "eq":
+															{
+																aCond.push( "=" + $(jxCond[j]).children("q_variant").text() );
+																break;
+															}
+															case "bw":
+															{
+																aCond.push( $(jxCond[j]).children("q_variant").text() + "*");
+																break;
+															}
+															case "eq":
+															{
+																aCond.push( "*" + $(jxCond[j]).children("q_variant").text() );
+																break;
+															}
+															case "eq":
+															{
+																aCond.push( "*" + $(jxCond[j]).children("q_variant").text() + "*" );
+																break;
+															}
+														}
+													}
+												}
+												$(document.createElement("td")).addClass("cl-results-q-variants-text").html( aCond.join(" " + sOp + " ") ).appendTo(jRow);
+											}
+										}
+									}
+									break;
+								}
+								case "oto":
+								{
+									var jxVars = oArgs.jxParams.find("q_variants_oto:first > item");
+									if(oArgs.oStore.R!=null && oArgs.oStore.R.length!=0)
+									{
+										for(var k=1; k<=jxVars.length; k++)
+										{
+											jRow = $(document.createElement("tr")).attr({ "data-var-id": k }).appendTo(oArgs.jVarTable);
+											jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html(fnGetText({ sHTML: $(jxVars[k-1]).children("q_target").text() })).appendTo(jRow);
+											if(oCurObj.data.bDisplayCorrects)
+											{
+												if(+oArgs.oStore.R[k-1]==k)
+												{
+													jCell.addClass("cl-results-correct");
+												}
+												else
+												{
+													jCell.addClass("cl-results-incorrect");
+												}
+											}
+											if(oArgs.oStore.R[k-1]!="" && !isNaN(+oArgs.oStore.R[k-1]))
+											{
+												jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html(fnGetText({ sHTML: $(jxVars[+oArgs.oStore.R[k-1]-1]).children("q_bullet").text() })).appendTo(jRow);
+												if(oCurObj.data.bDisplayCorrects)
+												{
+													if(+oArgs.oStore.R[k-1]==k)
+													{
+														jCell.addClass("cl-results-correct");
+													}
+													else
+													{
+														jCell.addClass("cl-results-incorrect");
+													}
+												}
+											}
+											else
+											{
+												jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html("&nbsp;").appendTo(jRow);
+											}
+											if(oCurObj.data.bDisplayCorrects)
+											{
+												jCell = $(document.createElement("td")).addClass("cl-results-q-variants-text").attr({ "data-var-id": k }).html(fnGetText({ sHTML: $(jxVars[k-1]).children("q_bullet").text() })).appendTo(jRow);
+											}
+										}
+									}
+									break;
+								}
+							}
+						}
+						
+						var jxObjList = oCurObj.jxParams.children("objects").children("item");
+						if(jxObjList.length!=0 && oCurObj.data.bCreated)
+						{
+							var jContainer = jCurObjDiv.find(".cl-results-container");
+							var jQTemplate = jCurObjDiv.find(".cl-template-storage .cl-results-q-template");
+							var jTTemplate = jCurObjDiv.find(".cl-template-storage .cl-results-t-template");
+							var jQBlock;
+							var jTBlock;
+							var sMainObj = "";
+							if(oCurObj.data.bDisplayMainScore)
+							{
+								for(var sKey in CLJ)
+								{
+									if(+CLJ[sKey].bModule==1)
+									{
+										sMainObj = sKey;
+										break;
+									}
+								}
+							} 
+							var jTxtDiv = $(document.createElement("div"));
+							jxObjList.each(function ()
+							{
+								var sId = $(this).children("objid").text();
+								var jxObject = CL.jxModule.find("object[id='" + sId + "']");
+								var jxParams = CL.jxParams.children("param[objectid='" + sId + "']");
+								var bDisplayHeader = ($(this).children("displayobjheader").text()=="yes");
+								var jxObjectives;
+								var sTxt;
+								if(jxObject.length>0)
+								{
+									var sType = jxObject.attr("type");
+									if(sType=="q_0000" || sType=="q_0001")
+									{
+										if(sType=="q_0001")
+										{ 
+											if(CLZ.oStore[sId]!=null)
+											{ 
+												var jTBlock = jContainer.find("div[data-o-id='" + sId + "']");
+												var jContents = jTBlock.children(".cl-results-t-contents").html("");
+												var jxTestParams = CL.jxParams.children("param[objectid='" + sId + "']");
+												var jxQuestions = jxTestParams.find("q_questions:first > item");
+												var jxQuestion;
+												var sQId;
+												var jxQParams;
+												for(var i=0; i<jxQuestions.length; i++)
+												{
+													sQId = sId + "_" + i; 
+													jQBlock = jQTemplate.clone(true).addClass("cl-results-q").attr({ "data-o-id": sId, "data-o-type": sType, "data-q-id": i, "data-o-toggle": "1" }).appendTo(jContents).show();
+													if(bDisplayHeader)
+													{
+														jQBlock.find(".cl-results-header .cl-results-header-title").html($(this).children("objheader").text() + " (" + (i+1) + "/" + jxQuestions.length + ")");
+													}
+													else
+													{
+														jQBlock.find(".cl-results-header .cl-results-header-title").html(oCurObj.jxParams.children("text_objecttype_test").text() + " " + sId + " (" + (i+1) + "/" + jxQuestions.length + ")");
+													}
+													if(CLZ.oStore[sId].Q[i]!=null)
+													{
+														jxQParams = $(jxQuestions[i]);
+														switch(CLZ.oStore[sId].Q[i].u)
+														{
+															case "c":
+															{
+																jQBlock.find(".cl-switch").show().on("click", function (e) { oCurObj.CallMethod({ sMethod: "Toggle", oMethodArgs: { oElem: this, oEvt: e } }) });
+																jQBlock.find(".cl-results-contents").show();
+																jQBlock.find(".cl-results-na").hide();
+																jQBlock.find(".cl-results-header-score").show();
+																var sType = jxQParams.children("question_type").text();
+																if(sMainObj!="")
+																{
+																	if(CLJ[sMainObj]!=null)
+																	{
+																		if(oCurObj.data.bDisplayMainScore && CLJ[sMainObj].oSrc[sQId]!=null)
+																		{
+																			jQBlock.find(".cl-results-header-score-div").html(CLJ[sMainObj].oSrc[sQId].nRawScore);
+																		}
+																	}
+																}
+																if(oCurObj.data.bDisplayQuestion)
+																{
+																	jQBlock.find(".cl-results-q-text").html(fnGetText({ sHTML: jxQParams.children("text_main").text() }));
+																}
+																if(oCurObj.data.bDisplayStats)
+																{
+																	var oOldType = { "true-false": "tf", "choice": "choice", "select": "select", "order": "range", "numeric": "numeric", "fib": "text", "oto": "oto", "otm": "otm", "mtm": "mtm" };
+																	var oScoring = { "true-false": "tf", "choice": "choice", "select": "choice", "order": "choice", "numeric": "choice", "fib": "choice", "oto": "choice", "otm": "choice", "mtm": "choice" };
+																	jQBlock.find(".cl-stats-q-type").html(oCurObj.jxParams.children("text_objecttype_" + oOldType[sType]).text());
+																	var sScoring = jxQParams.children("q_scoring_type_" + oScoring[sType]).text();
+																	jQBlock.find(".cl-stats-q-scoring").html(oCurObj.jxParams.children("text_constant_scoringtype").text() + " " + oCurObj.jxParams.children("text_scoringtype_" + sScoring).text());
+																	if(oCurObj.data.bDisplayAttempts)
+																	{
+																		var iAttemptsLeft = 0;
+																		for(var j=0; j<CLZ.oStore[sId].Q[i].A.length; j++)
+																		{
+																			if(CLZ.oStore[sId].Q[i].A[j].u=="c") continue;
+																			iAttemptsLeft = CLZ.oStore[sId].Q[i].A.length - j;
+																			break;
+																		}
+																		jQBlock.find(".cl-stats-q-attempts").html(oCurObj.jxParams.children("text_constant_attemptsmax").text() + " " + CLZ.oStore[sId].Q[i].A.length + "<br/>" + oCurObj.jxParams.children("text_constant_attemptsleft").text() + " " + iAttemptsLeft);
+																	}
+																	if(oCurObj.data.bDisplayTimers && CLZ.oStore[sId].Q[i].t!=null)
+																	{
+																		jQBlock.find(".cl-stats-q-timing").html(oCurObj.jxParams.children("text_constant_duration").text() + " " + CLZ.oStore[sId].Q[i].t + "<br/>" + oCurObj.jxParams.children("text_constant_latency").text() + " " + CLZ.oStore[sId].Q[i].e);
+																	}
+																	else
+																	{
+																		jQBlock.find(".cl-stats-q-timing").hide();
+																	}
+																	if(oCurObj.data.bDisplayScores)
+																	{
+																		jxObjectives = jxQParams.find("q_scoreboards > item");
+																		var sObjId;
+																		var jRow;
+																		var jCell;
+																		var jScoreTable = jQBlock.find(".cl-stats-obj-table");
+																		if(jScoreTable.children("tbody").length!=0)
+																		{
+																			jScoreTable = jScoreTable.children("tbody:first");
+																		}
+																		for(var j=0; j<jxObjectives.length; j++)
+																		{
+																			sObjId = $(jxObjectives[j]).children("q_board").text();
+																			jRow = jScoreTable.children("tr[data-obj-id='" + sObjId + "']");
+																			if(jRow.length==0)
+																			{
+																				jRow = $(document.createElement("tr")).attr({ "data-obj-id": sObjId }).appendTo(jScoreTable);
+																				$(document.createElement("td")).addClass("cl-stats-obj-obj").attr({ "data-obj-id": sObjId }).html(CLJ[sObjId].sName).appendTo(jRow);
+																				$(document.createElement("td")).addClass("cl-stats-obj-score").attr({ "data-obj-id": sObjId }).appendTo(jRow);
+																			}
+																			if(CLJ[sObjId].oSrc[sQId]!=null)
+																			{
+																				jRow.children(".cl-stats-obj-score").html(CLJ[sObjId].oSrc[sQId].nRawScore);
+																			}
+																			else
+																			{
+																				jRow.children(".cl-stats-obj-score").html("0");
+																			}
+																		}
+																	}
+																	else
+																	{
+																		jQBlock.find(".cl-stats-right").hide();
+																	}
+																}
+																if(oCurObj.data.bDisplayVariants)
+																{
+																	var jVarTable = jQBlock.find(".cl-results-q-variants-table");
+																	if(jVarTable.length!=0)
+																	{
+																		jVarTable.remove();
+																	}
+																	jVarTable = $(document.createElement("table")).addClass("cl-results-q-variants-table").appendTo(jQBlock.find(".cl-results-variants .cl-results-contents"));
+																	jVarTable = $(document.createElement("tbody")).appendTo(jVarTable);
+																	fnFillVars({ sId: sQId, sType: sType, jVarTable: jVarTable, jxParams: jxQParams, oStore: CLZ.oStore[sId].Q[i] });
+																}
+																break;
+															}
+															case "i":
+															{
+																jQBlock.find(".cl-switch").hide();
+																jQBlock.find(".cl-results-contents").hide();
+																jQBlock.find(".cl-results-na").show();
+																jQBlock.find(".cl-results-header-score").hide();
+																break;
+															}
+														}
+													}
+													else
+													{
+														jQBlock.find(".cl-switch").hide();
+														jQBlock.find(".cl-results-contents").hide();
+														jQBlock.find(".cl-results-na").show();
+														jQBlock.find(".cl-results-header-score").hide();
+													}
+												}
+											}
+										}
+										else
+										{
+											jQBlock = jContainer.find("div[data-o-id='" + sId + "']");
+											if(CLZ.oStore[sId]!=null)
+											{
+												switch(CLZ.oStore[sId].u)
+												{
+													case "c":
+													{
+														var sType = jxParams.children("question_type").text();
+														if(sMainObj!="")
+														{
+															if(CLJ[sMainObj]!=null)
+															{
+																if(oCurObj.data.bDisplayMainScore && CLJ[sMainObj].oSrc[sId]!=null)
+																{
+																	jQBlock.find(".cl-results-header-score-div").html(CLJ[sMainObj].oSrc[sId].nRawScore);
+																}
+															}
+														}
+														if(oCurObj.data.bDisplayQuestion)
+														{
+															jTxtDiv.html(jxParams.children("text_main").text());
+															jQBlock.find(".cl-results-q-text").html(jTxtDiv.text());
+														}
+														if(oCurObj.data.bDisplayStats)
+														{
+															var oOldType = { "true-false": "tf", "choice": "choice", "select": "select", "order": "range", "numeric": "numeric", "fib": "text", "oto": "oto", "otm": "otm", "mtm": "mtm" };
+															var oScoring = { "true-false": "tf", "choice": "choice", "select": "select", "order": "match", "numeric": "inputs", "fib": "inputs", "oto": "match", "otm": "match", "mtm": "match" };
+															jQBlock.find(".cl-stats-q-type").html(oCurObj.jxParams.children("text_objecttype_" + oOldType[sType]).text());
+															var sScoring = jxParams.children("q_scoring_type_" + oScoring[sType]).text();
+															jQBlock.find(".cl-stats-q-scoring").html(oCurObj.jxParams.children("text_constant_scoringtype").text() + " " + oCurObj.jxParams.children("text_scoringtype_" + sScoring).text());
+															if(oCurObj.data.bDisplayAttempts)
+															{
+																var iAttemptsLeft = 0;
+																for(var i=0; i<CLZ.oStore[sId].A.length; i++)
+																{
+																	if(CLZ.oStore[sId].A[i].u=="c") continue;
+																	iAttemptsLeft = CLZ.oStore[sId].A.length - i;
+																	break;
+																}
+																jQBlock.find(".cl-stats-q-attempts").html(oCurObj.jxParams.children("text_constant_attemptsmax").text() + " " + CLZ.oStore[sId].A.length + "<br/>" + oCurObj.jxParams.children("text_constant_attemptsleft").text() + " " + iAttemptsLeft);
+															}
+															if(oCurObj.data.bDisplayTimers && CLZ.oStore[sId].t!=null)
+															{
+																jQBlock.find(".cl-stats-q-timing").html(oCurObj.jxParams.children("text_constant_duration").text() + " " + CLZ.oStore[sId].t + "<br/>" + oCurObj.jxParams.children("text_constant_latency").text() + " " + CLZ.oStore[sId].e);
+															}
+															else
+															{
+																jQBlock.find(".cl-stats-q-timing").hide();
+															}
+															if(oCurObj.data.bDisplayScores)
+															{
+																jxObjectives = jxParams.find("q_scoreboards > item");
+																var sObjId;
+																var jRow;
+																var jCell;
+																var jScoreTable = jQBlock.find(".cl-stats-obj-table");
+																if(jScoreTable.children("tbody").length!=0)
+																{
+																	jScoreTable = jScoreTable.children("tbody:first");
+																}
+																for(var i=0; i<jxObjectives.length; i++)
+																{
+																	sObjId = $(jxObjectives[i]).children("q_board").text();
+																	jRow = jScoreTable.children("tr[data-obj-id='" + sObjId + "']");
+																	if(jRow.length==0)
+																	{
+																		jRow = $(document.createElement("tr")).attr({ "data-obj-id": sObjId }).appendTo(jScoreTable);
+																		$(document.createElement("td")).addClass("cl-stats-obj-obj").attr({ "data-obj-id": sObjId }).html(CLJ[sObjId].sName).appendTo(jRow);
+																		$(document.createElement("td")).addClass("cl-stats-obj-score").attr({ "data-obj-id": sObjId }).appendTo(jRow);
+																	}
+																	if(CLJ[sObjId].oSrc[sId]!=null)
+																	{
+																		jRow.children(".cl-stats-obj-score").html(CLJ[sObjId].oSrc[sId].nRawScore);
+																	}
+																	else
+																	{
+																		jRow.children(".cl-stats-obj-score").html("0");
+																	}
+																}
+															}
+															else
+															{
+																jQBlock.find(".cl-stats-right").hide();
+															}
+														}
+														if(oCurObj.data.bDisplayVariants)
+														{
+															var jVarTable = jQBlock.find(".cl-results-q-variants-table");
+															if(jVarTable.length!=0)
+															{
+																jVarTable.remove();
+															}
+															jVarTable = $(document.createElement("table")).addClass("cl-results-q-variants-table").appendTo(jQBlock.find(".cl-results-variants .cl-results-contents"));
+															jVarTable = $(document.createElement("tbody")).appendTo(jVarTable);
+															fnFillVars({ sId: sId, sType: sType, jVarTable: jVarTable, jxParams: jxParams, oStore: CLZ.oStore[sId] });
+														}
+														break;
+													}
+													case "i":
+													{
+														jQBlock.find(".cl-results-na").html("Не закончен");
+														break;
+													}
+												}
+											}
+										}
+									}
+								}
+							});
+						}
+						break;
+					}
+				}
+				return true;
+			}]]>
+			</body>
+		</method>
+	</methods>
+</params>

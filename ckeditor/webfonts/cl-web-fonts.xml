@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webfonts>
+	<font>
+		<name>WF Clear Sans Light</name><!-- pretty name -->
+		<user>0</user><!-- bundled|0|user|1 -->
+		<fingerprint>clear_sans_lightregular</fingerprint><!-- string to search -->
+		<style><![CDATA[clear_sans_lightregular, 'Arial Narrow', sans-serif;]]></style>
+		<config><![CDATA[WF Clear Sans Light/clear_sans_lightregular, 'Arial Narrow', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'clear_sans_lightregular';
+				src: url('webfonts/Clear/clearsans_light/ClearSans-Light-webfont.eot');
+				src: url('webfonts/Clear/clearsans_light/ClearSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Clear/clearsans_light/ClearSans-Light-webfont.woff') format('woff'),
+					 url('webfonts/Clear/clearsans_light/ClearSans-Light-webfont.ttf') format('truetype'),
+					 url('webfonts/Clear/clearsans_light/ClearSans-Light-webfont.svg#clear_sans_lightregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Clear/clearsans_light/ClearSans-Light-webfont.eot</file>
+			<file>webfonts/Clear/clearsans_light/ClearSans-Light-webfont.woff</file>
+			<file>webfonts/Clear/clearsans_light/ClearSans-Light-webfont.ttf</file>
+			<file>webfonts/Clear/clearsans_light/ClearSans-Light-webfont.svg</file>
+			<file>webfonts/Clear_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Clear Sans Medium</name>
+		<user>0</user>
+		<fingerprint>clear_sans_mediumregular</fingerprint>
+		<style><![CDATA[clear_sans_mediumregular, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Clear Sans Medium/clear_sans_mediumregular, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'clear_sans_mediumregular';
+				src: url('webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.eot');
+				src: url('webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.woff') format('woff'),
+					 url('webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.ttf') format('truetype'),
+					 url('webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.svg#clear_sans_mediumregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.eot</file>
+			<file>webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.woff</file>
+			<file>webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.ttf</file>
+			<file>webfonts/Clear/clearsans_medium/ClearSans-Medium-webfont.svg</file>
+			<file>webfonts/Clear_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Clear Sans Regular</name>
+		<user>0</user>
+		<fingerprint>clear_sansregular</fingerprint>
+		<style><![CDATA[clear_sansregular, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Clear Sans Regular/clear_sansregular, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'clear_sansregular';
+				src: url('webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.eot');
+				src: url('webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.woff') format('woff'),
+					 url('webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.ttf') format('truetype'),
+					 url('webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.eot</file>
+			<file>webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.woff</file>
+			<file>webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.ttf</file>
+			<file>webfonts/Clear/clearsans_regular/ClearSans-Regular-webfont.svg</file>
+			<file>webfonts/Clear_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Clear Sans Thin</name>
+		<user>0</user>
+		<fingerprint>clear_sans_thinregular</fingerprint>
+		<style><![CDATA[clear_sans_thinregular, 'Arial Narrow', sans-serif;]]></style><!-- full string in HTML style attribute -->
+		<config><![CDATA[WF Clear Sans Thin/clear_sans_thinregular, 'Arial Narrow', sans-serif;]]></config><!-- string to use in config.js of CKEditor -->
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'clear_sans_thinregular';
+				src: url('webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.eot');
+				src: url('webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.woff') format('woff'),
+					 url('webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.ttf') format('truetype'),
+					 url('webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.svg#clear_sans_thinregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.eot</file>
+			<file>webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.woff</file>
+			<file>webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.ttf</file>
+			<file>webfonts/Clear/clearsans_thin/ClearSans-Thin-webfont.svg</file>
+			<file>webfonts/Clear_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Droid Sans Mono</name>
+		<user>0</user>
+		<fingerprint>droid_sans_monoregular</fingerprint>
+		<style><![CDATA[droid_sans_monoregular, 'Lucida Console', Monaco, monospace;]]></style>
+		<config><![CDATA[WF Droid Sans Mono/droid_sans_monoregular, 'Lucida Console', Monaco, monospace;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'droid_sans_monoregular';
+				src: url('webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.eot');
+				src: url('webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.woff') format('woff'),
+					 url('webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.ttf') format('truetype'),
+					 url('webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.eot</file>
+			<file>webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.woff</file>
+			<file>webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.ttf</file>
+			<file>webfonts/Droid/droidsansmono_regular/DroidSansMono-webfont.svg</file>
+			<file>webfonts/Droid_Fonf_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Droid Sans Regular</name>
+		<user>0</user>
+		<fingerprint>droid_sansregular</fingerprint>
+		<style><![CDATA[droid_sansregular, Verdana, sans-serif;]]></style>
+		<config><![CDATA[WF Droid Sans Regular/droid_sansregular, Verdana, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'droid_sansregular';
+				src: url('webfonts/Droid/droidsans_regular/DroidSans-webfont.eot');
+				src: url('webfonts/Droid/droidsans_regular/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Droid/droidsans_regular/DroidSans-webfont.woff') format('woff'),
+					 url('webfonts/Droid/droidsans_regular/DroidSans-webfont.ttf') format('truetype'),
+					 url('webfonts/Droid/droidsans_regular/DroidSans-webfont.svg#droid_sansregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Droid/droidsans_regular/DroidSans-webfont.eot</file>
+			<file>webfonts/Droid/droidsans_regular/DroidSans-webfont.woff</file>
+			<file>webfonts/Droid/droidsans_regular/DroidSans-webfont.ttf</file>
+			<file>webfonts/Droid/droidsans_regular/DroidSans-webfont.svg</file>
+			<file>webfonts/Droid_Fonf_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Droid Serif Regular</name>
+		<user>0</user>
+		<fingerprint>droid_serifregular</fingerprint>
+		<style><![CDATA[droid_serifregular, Georgia, serif;]]></style>
+		<config><![CDATA[WF Droid Sans Regular/droid_serifregular, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'droid_serifregular';
+				src: url('webfonts/Droid/droidserif_regular/DroidSerif-webfont.eot');
+				src: url('webfonts/Droid/droidserif_regular/DroidSerif-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Droid/droidserif_regular/DroidSerif-webfont.woff') format('woff'),
+					 url('webfonts/Droid/droidserif_regular/DroidSerif-webfont.ttf') format('truetype'),
+					 url('webfonts/Droid/droidserif_regular/DroidSerif-webfont.svg#droid_serifregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Droid/droidserif_regular/DroidSerif-webfont.eot</file>
+			<file>webfonts/Droid/droidserif_regular/DroidSerif-webfont.woff</file>
+			<file>webfonts/Droid/droidserif_regular/DroidSerif-webfont.ttf</file>
+			<file>webfonts/Droid/droidserif_regular/DroidSerif-webfont.svg</file>
+			<file>webfonts/Droid_Fonf_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Neris Black</name>
+		<user>0</user>
+		<fingerprint>nerisblack</fingerprint>
+		<style><![CDATA[nerisblack, 'Arial Black', sans-serif;]]></style>
+		<config><![CDATA[WF Neris Black/nerisblack, 'Arial Black', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'nerisblack';
+				src: url('webfonts/Neris/neris_black/Neris-Black-webfont.eot');
+				src: url('webfonts/Neris/neris_black/Neris-Black-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Neris/neris_black/Neris-Black-webfont.woff') format('woff'),
+					 url('webfonts/Neris/neris_black/Neris-Black-webfont.ttf') format('truetype'),
+					 url('webfonts/Neris/neris_black/Neris-Black-webfont.svg#nerisblack') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Neris/neris_black/Neris-Black-webfont.eot</file>
+			<file>webfonts/Neris/neris_black/Neris-Black-webfont.woff</file>
+			<file>webfonts/Neris/neris_black/Neris-Black-webfont.ttf</file>
+			<file>webfonts/Neris/neris_black/Neris-Black-webfont.svg</file>
+			<file>webfonts/Neris_Font_Family_EULA.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Neris Light</name>
+		<user>0</user>
+		<fingerprint>nerislight</fingerprint>
+		<style><![CDATA[nerislight, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Neris Light/nerislight, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'nerislight';
+				src: url('webfonts/Neris/neris_light/Neris-Light-webfont.eot');
+				src: url('webfonts/Neris/neris_light/Neris-Light-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Neris/neris_light/Neris-Light-webfont.woff') format('woff'),
+					 url('webfonts/Neris/neris_light/Neris-Light-webfont.ttf') format('truetype'),
+					 url('webfonts/Neris/neris_light/Neris-Light-webfont.svg#nerislight') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Neris/neris_light/Neris-Light-webfont.eot</file>
+			<file>webfonts/Neris/neris_light/Neris-Light-webfont.woff</file>
+			<file>webfonts/Neris/neris_light/Neris-Light-webfont.ttf</file>
+			<file>webfonts/Neris/neris_light/Neris-Light-webfont.svg</file>
+			<file>webfonts/Neris_Font_Family_EULA.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Neris SemiBold</name>
+		<user>0</user>
+		<fingerprint>nerissemibold</fingerprint>
+		<style><![CDATA[nerissemibold, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Neris SemiBold/nerissemibold, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'nerissemibold';
+				src: url('webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.eot');
+				src: url('webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.woff') format('woff'),
+					 url('webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.ttf') format('truetype'),
+					 url('webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.svg#nerissemibold') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.eot</file>
+			<file>webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.woff</file>
+			<file>webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.ttf</file>
+			<file>webfonts/Neris/neris_semibold/Neris-SemiBold-webfont.svg</file>
+			<file>webfonts/Neris_Font_Family_EULA.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Neris Thin</name>
+		<user>0</user>
+		<fingerprint>neristhin</fingerprint>
+		<style><![CDATA[neristhin, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Neris Thin/neristhin, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'neristhin';
+				src: url('webfonts/Neris/neris_thin/Neris-Thin-webfont.eot');
+				src: url('webfonts/Neris/neris_thin/Neris-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Neris/neris_thin/Neris-Thin-webfont.woff') format('woff'),
+					 url('webfonts/Neris/neris_thin/Neris-Thin-webfont.ttf') format('truetype'),
+					 url('webfonts/Neris/neris_thin/Neris-Thin-webfont.svg#neristhin') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Neris/neris_thin/Neris-Thin-webfont.eot</file>
+			<file>webfonts/Neris/neris_thin/Neris-Thin-webfont.woff</file>
+			<file>webfonts/Neris/neris_thin/Neris-Thin-webfont.ttf</file>
+			<file>webfonts/Neris/neris_thin/Neris-Thin-webfont.svg</file>
+			<file>webfonts/Neris_Font_Family_EULA.txt</file>
+		</files>
+	</font>
+	<font>
+		<user>0</user>
+		<name>WF Noto Sans Regular</name>
+		<fingerprint>noto_sansregular</fingerprint>
+		<style><![CDATA[noto_sansregular, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Noto Sans Regular/noto_sansregular, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'noto_sansregular';
+				src: url('webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.eot');
+				src: url('webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.woff') format('woff'),
+					 url('webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.ttf') format('truetype'),
+					 url('webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.svg#noto_sansregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.eot</file>
+			<file>webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.woff</file>
+			<file>webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.ttf</file>
+			<file>webfonts/Noto/notosans_regular/NotoSans-Regular-webfont.svg</file>
+			<file>webfonts/Noto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Noto Serif Regular</name>
+		<user>0</user>
+		<fingerprint>noto_serifregular</fingerprint>
+		<style><![CDATA[noto_serifregular, Georgia, serif;]]></style>
+		<config><![CDATA[WF Noto Serif Regular/noto_serifregular, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'noto_serifregular';
+				src: url('webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.eot');
+				src: url('webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.woff') format('woff'),
+					 url('webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.ttf') format('truetype'),
+					 url('webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.svg#noto_serifregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.eot</file>
+			<file>webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.woff</file>
+			<file>webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.ttf</file>
+			<file>webfonts/Noto/notoserif_regular/NotoSerif-Regular-webfont.svg</file>
+			<file>webfonts/Noto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Open Sans Condensed Light</name>
+		<user>0</user>
+		<fingerprint>open_sanscondensed_light</fingerprint>
+		<style><![CDATA[open_sanscondensed_light, 'Arial Narrow', sans-serif;]]></style>
+		<config><![CDATA[WF Open Sans Condensed Light/open_sanscondensed_light, 'Arial Narrow', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'open_sanscondensed_light';
+				src: url('webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.eot');
+				src: url('webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.woff') format('woff'),
+					 url('webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.ttf') format('truetype'),
+					 url('webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.eot</file>
+			<file>webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.woff</file>
+			<file>webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.ttf</file>
+			<file>webfonts/Open/opensanscondensed_light/OpenSans-CondLight-webfont.svg</file>
+			<file>webfonts/Open_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Open Sans Extra Bold</name>
+		<user>0</user>
+		<fingerprint>open_sansextrabold</fingerprint>
+		<style><![CDATA[open_sansextrabold, 'Arial Black', sans-serif;]]></style>
+		<config><![CDATA[WF Open Sans Extra Bold/open_sansextrabold, 'Arial Black', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'open_sansextrabold';
+				src: url('webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.eot');
+				src: url('webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.woff') format('woff'),
+					 url('webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+					 url('webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.eot</file>
+			<file>webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.woff</file>
+			<file>webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.ttf</file>
+			<file>webfonts/Open/opensans_extrabold/OpenSans-ExtraBold-webfont.svg</file>
+			<file>webfonts/Open_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Open Sans Light</name>
+		<user>0</user>
+		<fingerprint>open_sanslight</fingerprint>
+		<style><![CDATA[open_sanslight, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Open Sans Light/open_sanslight, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'open_sanslight';
+				src: url('webfonts/Open/opensans_light/OpenSans-Light-webfont.eot');
+				src: url('webfonts/Open/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Open/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
+					 url('webfonts/Open/opensans_light/OpenSans-Light-webfont.ttf') format('truetype'),
+					 url('webfonts/Open/opensans_light/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Open/opensans_light/OpenSans-Light-webfont.eot</file>
+			<file>webfonts/Open/opensans_light/OpenSans-Light-webfont.woff</file>
+			<file>webfonts/Open/opensans_light/OpenSans-Light-webfont.ttf</file>
+			<file>webfonts/Open/opensans_light/OpenSans-Light-webfont.svg</file>
+			<file>webfonts/Open_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Open Sans Regular</name>
+		<user>0</user>
+		<fingerprint>open_sansregular</fingerprint>
+		<style><![CDATA[open_sansregular, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Open Sans Regular/open_sansregular, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'open_sansregular';
+				src: url('webfonts/Open/opensans_regular/OpenSans-Regular-webfont.eot');
+				src: url('webfonts/Open/opensans_regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Open/opensans_regular/OpenSans-Regular-webfont.woff') format('woff'),
+					 url('webfonts/Open/opensans_regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+					 url('webfonts/Open/opensans_regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Open/opensans_regular/OpenSans-Regular-webfont.eot</file>
+			<file>webfonts/Open/opensans_regular/OpenSans-Regular-webfont.woff</file>
+			<file>webfonts/Open/opensans_regular/OpenSans-Regular-webfont.ttf</file>
+			<file>webfonts/Open/opensans_regular/OpenSans-Regular-webfont.svg</file>
+			<file>webfonts/Open_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Open Sans SemiBold</name>
+		<user>0</user>
+		<fingerprint>open_sanssemibold</fingerprint>
+		<style><![CDATA[open_sanssemibold, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Open Sans SemiBold/open_sanssemibold, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'open_sanssemibold';
+				src: url('webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.eot');
+				src: url('webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.woff') format('woff'),
+					 url('webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.ttf') format('truetype'),
+					 url('webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.eot</file>
+			<file>webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.woff</file>
+			<file>webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.ttf</file>
+			<file>webfonts/Open/opensans_semibold/OpenSans-Semibold-webfont.svg</file>
+			<file>webfonts/Open_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Permian Sans Regular</name>
+		<user>0</user>
+		<fingerprint>permiansanstypefaceregular</fingerprint>
+		<style><![CDATA[permiansanstypefaceregular, Arial, sans-serif;]]></style>
+		<config><![CDATA[WF Permian Sans Regular/permiansanstypefaceregular, Arial, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'permiansanstypefaceregular';
+				src: url('webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.eot');
+				src: url('webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.woff') format('woff'),
+					 url('webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.ttf') format('truetype'),
+					 url('webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.svg#permiansanstypefaceregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.eot</file>
+			<file>webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.woff</file>
+			<file>webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.ttf</file>
+			<file>webfonts/Permian/permiansans_regular/PermianSansTypeface-webfont.svg</file>
+			<file>webfonts/Permian_Free_Font_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Permian Serif Regular</name>
+		<user>0</user>
+		<fingerprint>permianseriftypefaceregular</fingerprint>
+		<style><![CDATA[permianseriftypefaceregular, Georgia, serif;]]></style>
+		<config><![CDATA[WF Permian Serif Regular/permianseriftypefaceregular, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'permianseriftypefaceregular';
+				src: url('webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.eot');
+				src: url('webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.woff') format('woff'),
+					 url('webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.ttf') format('truetype'),
+					 url('webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.svg#permianseriftypefaceregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.eot</file>
+			<file>webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.woff</file>
+			<file>webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.ttf</file>
+			<file>webfonts/Permian/permianserif_regular/PermianSerifTypeface-webfont.svg</file>
+			<file>webfonts/Permian_Free_Font_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Permian Slab Serif Regular</name>
+		<user>0</user>
+		<fingerprint>permianslabseriftypefaceRg</fingerprint>
+		<style><![CDATA[permianslabseriftypefaceRg, Georgia, serif;]]></style>
+		<config><![CDATA[WF Permian Slab Serif Regular/permianslabseriftypefaceRg, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'permianslabseriftypefaceRg';
+				src: url('webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.eot');
+				src: url('webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.eot?#iefix') format('embedded-opentype'),
+					 url('webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.woff') format('woff'),
+					 url('webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.ttf') format('truetype'),
+					 url('webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.svg#permianslabseriftypefaceRg') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.eot</file>
+			<file>webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.woff</file>
+			<file>webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.ttf</file>
+			<file>webfonts/Permian/permianslabserif_regular/PermianSlabSerifTypeface-webfont.svg</file>
+			<file>webfonts/Permian_Free_Font_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Black</name>
+		<user>0</user>
+		<fingerprint>robotoblack</fingerprint>
+		<style><![CDATA[robotoblack, 'Arial Black', Gadget, sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Black/robotoblack, 'Arial Black', Gadget, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face {
+				font-family: 'robotoblack';
+				src: 	url('webfonts/Roboto/roboto_black/Roboto-Black-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_black/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_black/Roboto-Black-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_black/Roboto-Black-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_black/Roboto-Black-webfont.svg#robotoblack') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_black/Roboto-Black-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_black/Roboto-Black-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_black/Roboto-Black-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_black/Roboto-Black-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Condensed</name>
+		<user>0</user>
+		<fingerprint>roboto_condensedregular</fingerprint>
+		<style><![CDATA[roboto_condensedregular, 'Arial Narrow', sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Condensed/roboto_condensedregular, 'Arial Narrow', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'roboto_condensedregular';
+				src: 	url('webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_condensed/RobotoCondensed-Regular-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Condensed Light</name>
+		<user>0</user>
+		<fingerprint>roboto_condensedlight</fingerprint>
+		<style><![CDATA[roboto_condensedlight, 'Arial Narrow', sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Condensed Light/roboto_condensedlight, 'Arial Narrow', sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'roboto_condensedlight';
+				src: 	url('webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_lightcondensed/RobotoCondensed-Light-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Light</name>
+		<user>0</user>
+		<fingerprint>robotolight</fingerprint>
+		<style><![CDATA[robotolight, Arial, Helvetica, sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Light/robotolight, Arial, Helvetica, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'robotolight';
+				src: 	url('webfonts/Roboto/roboto_light/Roboto-Light-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_light/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_light/Roboto-Light-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_light/Roboto-Light-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_light/Roboto-Light-webfont.svg#robotolight') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_light/Roboto-Light-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_light/Roboto-Light-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_light/Roboto-Light-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_light/Roboto-Light-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Medium</name>
+		<user>0</user>
+		<fingerprint>robotomedium</fingerprint>
+		<style><![CDATA[robotomedium, Arial, Helvetica, sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Medium/robotomedium, Arial, Helvetica, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'robotomedium';
+				src: 	url('webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_medium/Roboto-Medium-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Regular</name>
+		<user>0</user>
+		<fingerprint>robotoregular</fingerprint>
+		<style><![CDATA[robotoregular, Arial, Helvetica, sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Regular/robotoregular, Arial, Helvetica, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'robotoregular';
+				src: 	url('webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_regular/Roboto-Regular-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Thin</name>
+		<user>0</user>
+		<fingerprint>robotothin</fingerprint>
+		<style><![CDATA[robotothin, Arial, Helvetica, sans-serif;]]></style>
+		<config><![CDATA[WF Roboto Thin/robotothin, Arial, Helvetica, sans-serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'robotothin';
+				src: 	url('webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.eot');
+				src: 	url('webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.woff') format('woff'),
+						url('webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.svg#robotothin') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.eot</file>
+			<file>webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.woff</file>
+			<file>webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.ttf</file>
+			<file>webfonts/Roboto/roboto_thin/Roboto-Thin-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Slab Light</name>
+		<user>0</user>
+		<fingerprint>roboto_slablight</fingerprint>
+		<style><![CDATA[roboto_slablight, Georgia, serif;]]></style>
+		<config><![CDATA[WF Roboto Slab Light/roboto_slablight, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'roboto_slablight';
+				src: 	url('webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.eot');
+				src: 	url('webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.woff') format('woff'),
+						url('webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.eot</file>
+			<file>webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.woff</file>
+			<file>webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.ttf</file>
+			<file>webfonts/Roboto/robotoslab_light/RobotoSlab-Light-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Slab Regular</name>
+		<user>0</user>
+		<fingerprint>roboto_slabregular</fingerprint>
+		<style><![CDATA[roboto_slabregular, Georgia, serif;]]></style>
+		<config><![CDATA[WF Roboto Slab Regular/roboto_slabregular, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'roboto_slabregular';
+				src: 	url('webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.eot');
+				src: 	url('webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.woff') format('woff'),
+						url('webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.eot</file>
+			<file>webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.woff</file>
+			<file>webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.ttf</file>
+			<file>webfonts/Roboto/robotoslab_regular/RobotoSlab-Regular-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+	<font>
+		<name>WF Roboto Slab Thin</name>
+		<user>0</user>
+		<fingerprint>roboto_slabthin</fingerprint>
+		<style><![CDATA[roboto_slabthin, Georgia, serif;]]></style>
+		<config><![CDATA[WF Roboto Slab Thin/roboto_slabthin, Georgia, serif;]]></config>
+		<css_rule><![CDATA[
+			@font-face
+			{
+				font-family: 'roboto_slabthin';
+				src: 	url('webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.eot');
+				src: 	url('webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+						url('webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.woff') format('woff'),
+						url('webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.ttf') format('truetype'),
+						url('webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.svg#roboto_slabthin') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+		]]></css_rule>
+		<files>
+			<file>webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.eot</file>
+			<file>webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.woff</file>
+			<file>webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.ttf</file>
+			<file>webfonts/Roboto/robotoslab_thin/RobotoSlab-Thin-webfont.svg</file>
+			<file>webfonts/Roboto_Font_Family_Apache_License.txt</file>
+		</files>
+	</font>
+</webfonts>

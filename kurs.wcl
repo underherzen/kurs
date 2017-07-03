@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Course file, saved 7/3/2017 8:15:11 AM by User using CourseLab 170305 -->
+<course3>
+<aicc_code>12</aicc_code>
+<aicc_name>Курс</aicc_name>
+<aicc_description>12</aicc_description>
+<modules>
+<module>
+<name>1</name>
+<folder_id>0</folder_id>
+<file>1\1.xml</file>
+<aicc_code>13</aicc_code>
+<aicc_name>kurs</aicc_name>
+<aicc_description>13</aicc_description>
+<aicc_maxmark></aicc_maxmark>
+<aicc_reqmark></aicc_reqmark>
+</module>
+</modules>
+<windows>
+<window>
+<module>1</module>
+<zoom>100</zoom>
+<timeLineVisible>true</timeLineVisible>
+<active>true</active>
+<slide>SLIDE_11</slide>
+</window>
+</windows>
+</course3>

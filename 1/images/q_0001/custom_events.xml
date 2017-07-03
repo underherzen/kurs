@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><events>
+	<event>
+		<name>onDisplayQuestion</name>
+		<label>Вопрос показан</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeChoice</name>
+		<label>Изменение выбора (ед.)</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeSelect</name>
+		<label>Изменение выбора (мн.)</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeOrder</name>
+		<label>Изменение порядка</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeNumericValue</name>
+		<label>Изменение числа</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeTextValue</name>
+		<label>Изменение текста</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onChangeMatch</name>
+		<label>Изменение соответствия</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onAttempt</name>
+		<label>Попытка ответа</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onSuccess</name>
+		<label>Попытка - правильно</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onFailure</name>
+		<label>Попытка - неправильно</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onTimeout</name>
+		<label>Окончание времени</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onAttemptsLimit</name>
+		<label>Исчерпание попыток</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onSkipQuestion</name>
+		<label>Вопрос пропущен</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onQuestionEnd</name>
+		<label>Вопрос завершен</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onTickTestTimer</name>
+		<label>Тик таймера теста</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onTestTimeout</name>
+		<label>Время теста исчерпано</label>
+		<group>Объект - собственные</group>
+	</event>
+	<event>
+		<name>onTestEnd</name>
+		<label>Тест завершен</label>
+		<group>Объект - собственные</group>
+	</event>
+</events>

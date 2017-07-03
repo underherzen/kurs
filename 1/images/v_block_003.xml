@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+'*	v_block_003.xml
+--><params>
+	<object>
+		<format>2.0</format>
+		<label>Градиентная подложка</label>
+		<description>Градиентная подложка</description>
+		<width>320</width>
+		<height>240</height>
+		<default_color_bg>color1</default_color_bg>
+		<default_color_border>stroke_color</default_color_border>
+		<state_extension>true</state_extension>
+	</object>
+	<page name="Основные" w="320" h="180">
+		<param type="label" id="lab_color_profile" text="Цветовая схема" def="" x="10" y="10" w="120" h="13"/>
+        <param type="select" id="color_profile" text="" def="steelblue" x="130" y="8" w="180" h="13">
+            <items>
+                <item id="turquoise" label="Бирюзовый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="lightblue" label="Голубой">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+					</events>
+                </item>
+                <item id="yellow" label="Желтый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="green" label="Зеленый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="brown" label="Коричневый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="red" label="Красный">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="deeppink" label="Малиновый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="olive" label="Оливковый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="orange" label="Оранжевый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="pink" label="Розовый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="grey" label="Серый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="bluegreen" label="Сине-зеленый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="blue" label="Синий">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="steelblue" label="Стальной синий">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="violet" label="Фиолетовый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="white" label="Белый">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="black" label="Черный">
+                    <events>
+                        <event name="selendok" target="bg_color" action="disable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="auto" label="Автоградиент">
+                    <events>
+                        <event name="selendok" target="bg_color" action="enable"/>
+                        <event name="selendok" target="gradient_color" action="disable"/>
+                        <event name="selendok" target="border_color" action="disable"/>
+                    </events>
+                </item>
+                <item id="custom" label="По выбору">
+                    <events>
+                        <event name="selendok" target="bg_color" action="enable"/>
+                        <event name="selendok" target="gradient_color" action="enable"/>
+                        <event name="selendok" target="border_color" action="enable"/>
+                    </events>
+                </item>
+            </items>
+        </param>
+
+        <param type="color" id="color1" text="" def="#0080C0" x="130" y="24" w="40" h="13"/>
+        <param type="color" id="color2" text="" def="#53C7FF" x="190" y="24" w="40" h="13"/>		
+        <param type="color" id="stroke_color" text="" def="#336699" x="250" y="24" w="40" h="13"/>
+		
+		<param type="label" id="lab_angle" text="Угол градиента" def="" x="10" y="42" w="120" h="13"/>
+		<param type="spinner" id="angle" text="" def="0" x="130" y="40" w="32" h="13" min="0" max="359"/>
+		<param type="label" id="lab_angle2" text="°" def="" x="165" y="42" w="30" h="13"/>
+
+		<param type="label" id="lab_border_width" text="Граница, пкс" def="" x="10" y="56" w="120" h="13"/>
+		<param type="line" id="line_1" x="130" y="56" w="180" h="46"/>
+		<param type="spinner" id="border_width_t" text="" def="1" x="200" y="60" w="32" h="13" min="0" max="99"/>
+		<param type="spinner" id="border_width_l" text="" def="1" x="135" y="72" w="32" h="13" min="0" max="99"/>
+		<param type="spinner" id="border_width_r" text="" def="1" x="272" y="72" w="32" h="13" min="0" max="99"/>
+		<param type="spinner" id="border_width_b" text="" def="1" x="200" y="84" w="32" h="13" min="0" max="99"/>
+
+		<param type="label" id="lab_radius" text="Радиус, пкс" def="" x="10" y="106" w="120" h="13"/>
+		<param type="line" id="line_1" x="130" y="106" w="180" h="46"/>
+		<param type="spinner" id="radius_tl" text="" def="10" x="135" y="110" w="32" h="13" min="0" max="9999"/>
+		<param type="spinner" id="radius_tr" text="" def="10" x="272" y="110" w="32" h="13" min="0" max="9999"/>
+		<param type="spinner" id="radius_bl" text="" def="10" x="135" y="134" w="32" h="13" min="0" max="9999"/>
+		<param type="spinner" id="radius_br" text="" def="10" x="272" y="134" w="32" h="13" min="0" max="9999"/>
+
+		<param type="label" id="lab_shadow" text="Тень" def="" x="10" y="158" w="120" h="13"/>
+		<param type="select" id="shadow_strength" text="" def="normal" x="130" y="156" w="120" h="13">
+			<items>
+				<item id="none" label="Без тени"/>
+				<item id="extralight" label="Очень слабая"/>
+				<item id="light" label="Слабая"/>
+				<item id="normal" label="Нормальная"/>
+				<item id="dark" label="Интенсивная"/>
+				<item id="extradark" label="Очень интенсивная"/>
+			</items>
+		</param>
+	</page>
+</params>
